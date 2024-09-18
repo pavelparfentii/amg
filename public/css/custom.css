@@ -1,0 +1,127 @@
+.table-button{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #98dfb6;
+    border: 1px solid #2fa360;
+}
+.bar-button{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #3f9ae5;
+    border: 1px solid #1d68a7;
+}
+.table-button-active{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: #DF4B23;
+    border: 1px solid #2fa360;
+}
+.bar-button-active{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #DF4B23;
+    border: 1px solid #1d68a7;
+}
+
+.button-category{
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.button-item{
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+.container{
+    max-width: 1600px;
+}
+tr.active{
+    background: #8f9397;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+tr>td.block{
+    position: relative;
+    padding-bottom: 0;
+}
+.content-block{
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 3px;
+    white-space: normal;
+    display: flex;
+    align-items: top;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    flex-direction: column;
+}
+.content-block:hover{
+    height: 404% !important;
+    z-index: 999;
+    border: 1px solid #e4e4e4;
+}
+.block-x{
+    height: 101%;
+}
+.block-1x{
+    height: 101%;
+}
+.block-2x{
+    height: 202%;
+}
+.block-3x{
+    height: 303%;
+}
+.block-4x{
+    height: 404%;
+}
+.block-5x{
+    height: 505%;
+}
+.block{
+    background-color: #ebeef0;
+    border-color: #dadee3;
+}
+.new{
+    background-color: #ffe0db;
+    border-color: #ffc5bb;
+}
+.visited{
+    background-color: #fff2d6;
+    border-color: #ffe6b3;
+}
+.payed{
+    background-color: #e8fadf;
+    border-color: #d4f5c3;
+}
+.partpayed{
+    background-color: #e7e7ff;
+    border-color: #d2d3ff;
+}
+.promo-marker{
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3px;
+}
+.promo-marker span{
+    padding: 2px;
+    background: #0b2e13;
+    color: #fff;
+    border-radius: 2px;
+}
+.visit-info{
+    height: calc(100% - 30px);
+    overflow: hidden;
+    height: auto;
+}
+.action-block{
+    font-size: 0.7rem;
+}
