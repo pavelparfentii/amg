@@ -59,6 +59,9 @@
             });
             return false;
         });
+        $(".btn-close").click(function () {
+            $("#offcanvasAddServices").removeClass('show');
+        });
 
     });
 </script>

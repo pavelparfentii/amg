@@ -87,6 +87,7 @@
                         $("#tableResult").html(response);
                         $("#name").val('');
                         $("#groupSearch").html('');
+                        $(".offcanvas-end").removeClass('show');
                     }
                 });
             });

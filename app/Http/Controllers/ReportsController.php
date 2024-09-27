@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Session;
 class ReportsController extends Controller
 {
     public function services_period(Request $request){
-        return 'development in progress';
+        return view('reports.index');
     }
 
     public function doctor_period(Request $request){
-        return 'development in progress';
+        return view('reports.index');
     }
 
     public function pay_period(Request $request){

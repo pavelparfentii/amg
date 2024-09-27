@@ -136,6 +136,8 @@
                         $("#tableResult").html(response);
                         $("#name").val('');
                         $("#groupSearch").html('');
+                        $(".offcanvas-end").removeClass('show');
+
                     }
                 });
             });
@@ -149,6 +151,8 @@
                     success: function(response){
                         $("#tableResult").html(response);
                         $("#form-add-new-service").removeAttr('disabled');
+                        // $("#offcanvasAddServices").addClass('show');
+                        $(".offcanvas-end").removeClass('show');
                     }
                 });
                 return false;

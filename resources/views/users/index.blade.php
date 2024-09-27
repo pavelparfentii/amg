@@ -91,6 +91,7 @@
                         $("#name").val('');
                         $("#role").val('');
                         $("#email").val('');
+                        $(".offcanvas-end").removeClass('show');
                     }
                 });
             });

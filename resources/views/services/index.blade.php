@@ -161,6 +161,7 @@
                         $("#price").val('');
                         $("#cost").val('');
                         $("#doctor_price").val('');
+                        $(".offcanvas-end").removeClass('show');
                     }
                 });
                 return false;
@@ -180,6 +181,9 @@
                     }
                 });
             });
+        });
+        $(".btn-close").click(function () {
+            $(".offcanvas-end").removeClass('show');
         });
     </script>
 @endsection

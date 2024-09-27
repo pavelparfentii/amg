@@ -1,3 +1,5 @@
+
+
 <div class="modal-dialog modal-lg modal-simple modal-dialog-centered modal-add-new-role">
     <div class="modal-content p-3 p-md-5">
         <div class="modal-body">
@@ -71,8 +73,31 @@
         </div>
     </div>
 </div>
+
 <script>
+    document.addEventListener('click', function(event) {
+        // Перевіряємо чи клік був на кнопці закриття
+        if (event.target.classList.contains('btn-close') || event.target.getAttribute('data-bs-dismiss') === 'modal') {
+
+            // Закриваємо модальне вікно
+            const modal = document.getElementById('addRoleModal');
+            modal.classList.remove('show');
+            modal.style.display = 'none';
+
+            // Видаляємо backdrop вручну
+            const backdrop = document.querySelector('.modal-backdrop');
+            if (backdrop) {
+                backdrop.remove(); // Видаляємо затемнення
+            }
+
+            // Очищаємо вміст модального вікна після закриття
+            modal.addEventListener('hidden.bs.modal', function () {
+                modal.innerHTML = ''; // Очищуємо вміст
+            });
+        }
+    });
     $(document).ready(function() {
+
         $("#addRoleForm").on('submit', function (e) {
             e.preventDefault();
             var form = $(this);
@@ -89,5 +114,7 @@
         $("#selectAll").click(function(){
             $('input:checkbox').not(this).prop('checked', this.checked);
         });
+
     });
 </script>
+

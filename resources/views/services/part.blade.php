@@ -7,6 +7,7 @@
         <th>Собівартість</th>
         <th>Статус</th>
         <th>Action</th>
+
     </tr>
     </thead>
     <tbody>

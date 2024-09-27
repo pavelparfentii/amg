@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
     <link rel="icon" href="{{ asset('images/favicon.png') }}?v=2" type="image/png" />
+
     <!--plugins-->
     <title>DoMed - v.2.0</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -99,6 +99,7 @@
                         $("#tableResult").html(response);
                         $("#name").val('');
                         $("#groupSearch").html('');
+                        $(".offcanvas-end").removeClass('show');
                     }
                 });
             });
@@ -119,6 +120,9 @@
 
             });
 
+        });
+        $(".btn-primary").click(function () {
+            $(".offcanvas-end").removeClass('show');
         });
     </script>
 @endsection

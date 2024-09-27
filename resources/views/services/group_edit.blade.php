@@ -47,5 +47,8 @@
                 }
             });
         });
+        $(".btn-close").click(function () {
+            $(".offcanvas-end").removeClass('show');
+        });
     });
 </script>

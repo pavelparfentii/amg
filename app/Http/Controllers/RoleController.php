@@ -76,7 +76,8 @@ class RoleController extends Controller
         $role->values = $uaccess;
         $role->save();
 
-        return true;
+//        return true;
 
+        return redirect()->route('users_role.index');
     }
 }

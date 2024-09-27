@@ -85,6 +85,9 @@
             $(".btn-close").click(function(){
                 $(".offcanvas-end").removeClass('show');
             });
+            $(".btn-primary").click(function () {
+                $(".offcanvas-end").removeClass('show');
+            });
             $("#form-add-new-record").submit(function(){
                 var name = $("#name").val();
                 var slug = $("#slug").val();
@@ -102,6 +105,7 @@
                         $("#slug").val('');
                         $("#discount_percent").val('');
                         $("#discount_absolute").val('');
+                        $(".offcanvas-end").removeClass('show');
                     }
                 });
             });

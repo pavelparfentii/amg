@@ -49,6 +49,7 @@
                 </div>
             </div>
             <div class="modal fade" id="addRoleModal">
+
             </div>
         </div>
     </div>
@@ -56,6 +57,9 @@
 @section('script')
     <script>
         $(document).ready(function(){
+            $(".btn-close").click(function () {
+                $("#addRoleModal").removeClass('show');
+            });
             $(".addRoleForm").on('submit', function(e){
                 e.preventDefault();
                 var form = $(this);
@@ -96,6 +100,7 @@
                     }
                 });
             });
+
         });
     </script>
 @endsection

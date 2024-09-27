@@ -199,14 +199,17 @@
 </aside>
 <div class="layout-page">
 
-    <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+    <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar" style="margin-top: 20px; margin-bottom: 20px;">
 
         <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0  d-xl-none ">
             <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
                 <i class="bx bx-menu bx-sm"></i>
             </a>
         </div>
-        <div>Дата календаря: <input type="date" class="form-control" placeholder="ДД.ММ.РРРР" id="flatpickr-date" value="@if(Session::get('date')){{ Session::get('date') }}@else{{date("Y-m-d", time())}}@endif" /></div>
+
+        <div style="margin-bottom: 6px;">Дата календаря: <input type="date" class="form-control" placeholder="ДД.ММ.РРРР" id="flatpickr-date" value="@if(Session::get('date')){{ Session::get('date') }}@else{{date("Y-m-d", time())}}@endif" /></div>
+
+
         <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
             <!-- Search -->

@@ -148,6 +148,9 @@
             $(".btn-close").click(function () {
                 $("#offcanvasAddServices").removeClass('show');
             });
+            $(".btn-primary").click(function () {
+                $("#offcanvasAddServices").removeClass('show');
+            });
             $('#groupSearch').select2({
                 placeholder: 'Почніть вводити назву..',
                 language: "uk",

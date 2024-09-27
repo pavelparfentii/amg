@@ -70,6 +70,9 @@
             $(".btn-close").click(function () {
                 $(".offcanvas-end").removeClass('show');
             });
+            $(".btn-primary").click(function () {
+                $(".offcanvas-end").removeClass('show');
+            });
 
             $('#serviceSearch').select2({
                 placeholder: 'Почніть вводити назву..',
