@@ -17,8 +17,8 @@ class UsersController extends Controller
 {
     public function index(){
         $access = User::select('access')->where('id', Auth::user()->id)->first();
-
-        if(!in_array('read', json_decode(Auth::user()->access, true)['koristuvaci'])){
+//        dd(!isset(json_decode($access->access, true)['koristuvaci']));
+        if(!isset(json_decode($access->access, true)['koristuvaci']) || !in_array('read', json_decode($access->access, true)['koristuvaci'])){
             return view('site.not_access', ['user' => Auth::user()]);
         }
 
@@ -63,6 +63,7 @@ class UsersController extends Controller
         $user = User::find($id);
 
         $roles = Roles::all();
+
 
         if(!in_array('write', json_decode(Auth::user()->access, true)['koristuvaci'])){
             return view('site.not_access', ['user' => $user]);

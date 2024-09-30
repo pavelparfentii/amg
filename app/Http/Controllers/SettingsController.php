@@ -14,7 +14,7 @@ use Illuminate\Support\Str;
 class SettingsController extends Controller
 {
     public function times(){
-
+        return view('reports.index');
     }
 
     public function pages(){

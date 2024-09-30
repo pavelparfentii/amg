@@ -78,9 +78,33 @@
 {{--</div>--}}
 
     <script>
+        // document.addEventListener('click', function(event) {
+        //     // Перевіряємо чи клік був на кнопці закриття
+        //     if (event.target.classList.contains('btn-close') || event.target.getAttribute('data-bs-dismiss') === 'modal') {
+        //
+        //         // Закриваємо модальне вікно
+        //         const modal = document.getElementById('addRoleModal');
+        //         modal.classList.remove('show');
+        //         modal.style.display = 'none';
+        //
+        //         // Видаляємо backdrop вручну
+        //         const backdrop = document.querySelector('.modal-backdrop');
+        //         if (backdrop) {
+        //             backdrop.remove(); // Видаляємо затемнення
+        //         }
+        //
+        //         // Очищаємо вміст модального вікна після закриття
+        //         modal.addEventListener('hidden.bs.modal', function () {
+        //             modal.innerHTML = ''; // Очищуємо вміст
+        //         });
+        //     }
+        // });
         $(document).ready(function() {
             $(".btn-close").click(function () {
-                $("#addRoleForm").removeClass('show');
+                // $('body').removeClass('modal-open');
+                $('#addRoleModal').modal('hide');
+                // $('.modal-backdrop').hide();
+                $("#addRoleModal").removeClass('show');
             });
             $(".addRoleForm").on('submit', function (e) {
                 e.preventDefault();
@@ -90,7 +114,9 @@
                     type: "POST",
                     data: form.serialize(),
                     success: function (response) {
-                        $("#addRoleModal").modal('hide');
+                        // $("#addRoleModal").modal('hide');
+                        $("#addRoleModal").removeClass('show');
+                        // $("#addRoleForm").removeClass('show');
                         // $("#addRoleModal").html(response);
                         // $("#addRoleModal").css('display', 'none');
                         // $("#addRoleModal").removeClass('show');
@@ -101,8 +127,11 @@
             $("#selectAll").click(function(){
                 $('input:checkbox').not(this).prop('checked', this.checked);
             });
-            $(".btn btn-label-secondary").click(function(){
-                $("#addRoleModal").modal('hide');
+            $(".btn-label-secondary").click(function(){
+                // $("#addRoleModal").modal('hide');
+
+                // $("#addRoleForm").removeClass('show');
+                $("#addRoleModal").removeClass('show');
             });
         });
     </script>
